@@ -11,7 +11,7 @@ public class Payroll {
         arr[2] = thirdemployee;
 
         for (int i = 0; i < 3; i++) {
-            System.out.println(arr[i]);
+//            System.out.println(arr[i]);
         }
     }
 }
