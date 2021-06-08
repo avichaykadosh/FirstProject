@@ -2,6 +2,9 @@ package primitives;
 import java.util.Objects;
 
 import static primitives.Point3D.ZERO;
+/**
+ * @author Avihay Kadosh - 316243070
+ * */
 
 public class Vector {
     Point3D _head;

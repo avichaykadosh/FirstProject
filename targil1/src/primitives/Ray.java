@@ -1,6 +1,9 @@
 package primitives;
 
 import java.util.Objects;
+/**
+ * @author Avihay Kadosh - 316243070
+ * */
 
 public class Ray {
     private Point3D p0;
@@ -30,6 +33,15 @@ public class Ray {
      */
     public Vector getDir() {
         return dir;
+    }
+
+    /**
+     *
+     * @param t -  number
+     * @return -  a point with t distance from Ray
+     */
+    public Point3D getPoint(double t) {
+        return p0.add(dir.scale(t));
     }
 
     /**

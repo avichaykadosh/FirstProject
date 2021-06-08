@@ -1,8 +1,8 @@
 package primitives;
 
 import java.util.Objects;
-
 /**
+ * @author Avihay Kadosh - 316243070
  * basic object for 3D Point
  */
 
@@ -11,7 +11,7 @@ public class Point3D {
     Coordinate _y;
     Coordinate _z;
 
-    static Point3D ZERO = new Point3D(0, 0, 0);
+    public static Point3D ZERO = new Point3D(0, 0, 0);
 
     /**
      * @param x coordinate for X axis
