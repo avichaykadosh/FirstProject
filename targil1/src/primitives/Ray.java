@@ -6,8 +6,8 @@ import java.util.Objects;
  * */
 
 public class Ray {
-    private Point3D p0;
-    private Vector dir;
+    final Point3D _p0;
+    final Vector _dir;
 
     /**
      * constructor
@@ -15,8 +15,8 @@ public class Ray {
      * @param dir - a vector
      */
     public Ray(Point3D p0, Vector dir) {
-        this.p0 = p0;
-        this.dir = dir;
+        _p0 = p0;
+        _dir = dir;
     }
 
     /**
@@ -24,7 +24,7 @@ public class Ray {
      * @return - returns a point3D
      */
     public Point3D getP0() {
-        return p0;
+        return _p0;
     }
 
     /**
@@ -32,7 +32,7 @@ public class Ray {
      * @return - returns a vector
      */
     public Vector getDir() {
-        return dir;
+        return _dir;
     }
 
     /**
@@ -41,7 +41,7 @@ public class Ray {
      * @return -  a point with t distance from Ray
      */
     public Point3D getPoint(double t) {
-        return p0.add(dir.scale(t));
+        return _p0.add(_dir.scale(t));
     }
 
     /**
@@ -51,8 +51,8 @@ public class Ray {
     @Override
     public String toString() {
         return "Ray{" +
-                "p0=" + p0 +
-                ", dir=" + dir +
+                "p0=" + _p0 +
+                ", dir=" + _dir +
                 '}';
     }
 
@@ -66,11 +66,11 @@ public class Ray {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Ray ray = (Ray) o;
-        return p0.equals(ray.p0) && dir.equals(ray.dir);
+        return _p0.equals(ray._p0) && _dir.equals(ray._dir);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(p0, dir);
+        return Objects.hash(_p0, _dir);
     }
 }

@@ -6,7 +6,7 @@ import primitives.Vector;
 
 public class Cylinder extends Tube {
 
-    private double height;
+    final double _height;
 
     /**
      * constructor
@@ -16,7 +16,7 @@ public class Cylinder extends Tube {
      */
     public Cylinder(Ray axisRay, double radius, double height) {
         super(axisRay, radius);
-        this.height = height;
+        _height = height;
     }
 
     /**
@@ -24,7 +24,7 @@ public class Cylinder extends Tube {
      * @return returns height
      */
     public double getHeight() {
-        return height;
+        return _height;
     }
 
     /**

@@ -1,6 +1,7 @@
 package primitives;
 
 import java.util.Objects;
+
 /**
  * @author Avihay Kadosh - 316243070
  * basic object for 3D Point
@@ -19,11 +20,14 @@ public class Point3D {
      * @param z coordinate for Z axis
      */
     public Point3D(Coordinate x, Coordinate y, Coordinate z) {
-        this(x.coord, y.coord, z.coord);
+        _x = x;
+        _y = y;
+        _z = z;
     }
 
     /**
      * constructor
+     *
      * @param x coordinate for X axis
      * @param y coordinate for Y axis
      * @param z coordinate for Z axis
@@ -51,7 +55,6 @@ public class Point3D {
     }
 
     /**
-     *
      * @param o -  a bool
      * @return - returns a bool answer if they both are equal
      */
@@ -73,12 +76,14 @@ public class Point3D {
      * @return - returns the distance
      */
     public double distanceSquared(Point3D point3D) {
-        double x1 = _x.coord;
-        double y1 = _y.coord;
-        double z1 = _z.coord;
-        double x2 = point3D._x.coord;
-        double y2 = point3D._y.coord;
-        double z2 = point3D._z.coord;
+        final double x1 = _x.coord;
+        final double y1 = _y.coord;
+        final double z1 = _z.coord;
+
+        final double x2 = point3D._x.coord;
+        final double y2 = point3D._y.coord;
+        final double z2 = point3D._z.coord;
+
         return ((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1) + (z2 - z1) * (z2 - z1));
 
     }
@@ -95,6 +100,7 @@ public class Point3D {
 
     /**
      * add function allowes to add the coordinates to combined resaults, by algebra;
+     *
      * @param vector -  a vector
      * @return - point after adding the vector
      */
@@ -104,7 +110,6 @@ public class Point3D {
     }
 
     /**
-     *
      * @param point - a point
      * @return - returns the vector after subtracting
      */

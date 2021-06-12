@@ -3,8 +3,8 @@ import primitives.*;
 import java.util.List;
 
 public class Polygon implements Geometry {
-    protected List<Point3D> vertices;
-    protected Plane plane;
+    protected List<Point3D> _vertices;
+    protected Plane _plane;
 
     /**
      * construction
@@ -12,8 +12,8 @@ public class Polygon implements Geometry {
      * @param plane - polygon plane
      */
     public Polygon(List<Point3D> vertices, Plane plane) {
-        this.vertices = vertices;
-        this.plane = plane;
+        _vertices = vertices;
+        _plane = plane;
     }
 
     /**
@@ -30,7 +30,7 @@ public class Polygon implements Geometry {
      * @return vertices
      */
     public List<Point3D> getVertices() {
-        return vertices;
+        return _vertices;
     }
 
     /**
@@ -38,7 +38,7 @@ public class Polygon implements Geometry {
      * @return returns plane
      */
     public Plane getPlane() {
-        return plane;
+        return _plane;
     }
 
     /**
@@ -47,8 +47,8 @@ public class Polygon implements Geometry {
     @Override
     public String toString() {
         return "polygon{" +
-                "vertices=" + vertices +
-                ", plane=" + plane +
+                "vertices=" + _vertices +
+                ", plane=" + _plane +
                 '}';
     }
 
@@ -59,6 +59,6 @@ public class Polygon implements Geometry {
      */
     @Override
     public Vector getNormal(Point3D point) {
-        return plane.getNormal();
+        return _plane.getNormal(null);
     }
 }

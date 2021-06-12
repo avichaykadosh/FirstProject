@@ -5,8 +5,8 @@ import primitives.Vector;
 
 public class Sphere implements Geometry {
 
-    private Point3D center;
-    private double radius;
+    final Point3D _center;
+    final double _radius;
 
     /**
      * constractor
@@ -14,8 +14,8 @@ public class Sphere implements Geometry {
      * @param radius - Double
      */
     public Sphere(Point3D center, double radius) {
-        this.center = center;
-        this.radius = radius;
+        _center = center;
+        _radius = radius;
     }
 
     /**
@@ -23,7 +23,7 @@ public class Sphere implements Geometry {
      * @return center
      */
     public Point3D getCenter() {
-        return center;
+        return _center;
     }
 
     /**
@@ -31,7 +31,7 @@ public class Sphere implements Geometry {
      * @return - returns Radius
      */
     public double getRadius() {
-        return radius;
+        return _radius;
     }
 
     /**
@@ -41,7 +41,8 @@ public class Sphere implements Geometry {
      */
     @Override
     public Vector getNormal(Point3D point3d) {
-        return point3d.subtract(this.center).normalize();
+        //TODO create normal vector
+        return point3d.subtract(_center).normalize();
     }
 
     /**
@@ -51,8 +52,8 @@ public class Sphere implements Geometry {
     @Override
     public String toString() {
         return "Sphere{" +
-                "center=" + center +
-                ", radius=" + radius +
+                "center=" + _center +
+                ", radius=" + _radius +
                 '}';
     }
 }

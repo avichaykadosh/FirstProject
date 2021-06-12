@@ -21,6 +21,11 @@ public class Vector {
     }
 
     public Vector(double x, double y, double z) {
+        Point3D head = new Point3D(x,y,z);
+        if (head.equals(ZERO)){
+            throw new IllegalArgumentException("head cannot be (0,0,0)");
+        }
+        _head = head;
     }
 
     /**
@@ -91,7 +96,8 @@ public class Vector {
      * @return  -returns the length power by 2
      */
     public double lengthSquared() {
-        return _head.distanceSquared(ZERO);
+        return ZERO.distanceSquared(this._head);
+//        return _head.distanceSquared(Point3D.ZERO);
     }
 
     /**
