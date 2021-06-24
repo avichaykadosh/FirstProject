@@ -18,7 +18,7 @@ class TubeTest {
         Point3D p0 = new Point3D(0, 0, 1);
         Vector dirVector = new Vector(0, 0, 1);
         Ray axisRay = new Ray(p0, dirVector);
-        Tube tube = new Tube(axisRay, 5);
+        Tube tube = new Tube(5,axisRay);
 
         // calculate the o point.
         Vector vector = p.subtract(tube.getAxisRay().getP0());

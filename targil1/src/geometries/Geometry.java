@@ -8,7 +8,7 @@ import primitives.Vector;
  * */
 
 
-public interface Geometry {
+public interface Geometry extends Intersectable{
     /**
      *
      * @param point3d - point on the shape surface

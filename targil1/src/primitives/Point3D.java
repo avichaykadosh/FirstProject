@@ -109,6 +109,7 @@ public class Point3D {
                 _z.coord + vector._head._z.coord);
     }
 
+
     /**
      * @param point - a point
      * @return - returns the vector after subtracting

@@ -3,18 +3,21 @@ import primitives.Ray;
 import primitives.Point3D;
 import primitives.Vector;
 
-public class Tube implements Geometry{
-    final Ray _axisRay;
-    final double _radius;
+import java.util.List;
+
+public class Tube extends RadialGeometry implements Geometry{
+
+    protected Ray _axisRay;
+
 
     /**
      * constructor
      * @param axisRay - Ray
      * @param radius - double radious
      */
-    public Tube(Ray axisRay, double radius) {
+    public Tube(double radius,Ray axisRay ) {
+        super(radius);
         _axisRay = axisRay;
-        _radius = radius;
     }
 
     /**
@@ -55,5 +58,10 @@ public class Tube implements Geometry{
         double dir = _axisRay.getDir().dotProduct(point3d.subtract(_axisRay.getP0()));
         Point3D projection = _axisRay.getP0().add(_axisRay.getDir().scale(dir));
         return point3d.subtract(projection).normalize();
+    }
+
+    @Override
+    public List<Point3D> findIntersections(Ray ray) {
+        return null;
     }
 }
