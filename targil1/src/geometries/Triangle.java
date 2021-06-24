@@ -16,9 +16,9 @@ public class Triangle extends Polygon {
         super(p1, p2, p3);
     }
 
-    public Triangle(List<Point3D> vertices, Plane plane) {
-        super(vertices, plane);
-    }
+//    public Triangle(List<Point3D> vertices, Plane plane) {
+//        super(vertices, plane);
+//    }
 
 
 }

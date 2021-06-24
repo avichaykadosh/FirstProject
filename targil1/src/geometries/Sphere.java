@@ -41,7 +41,6 @@ public class Sphere implements Geometry {
      */
     @Override
     public Vector getNormal(Point3D point3d) {
-        //TODO create normal vector
         return point3d.subtract(_center).normalize();
     }
 

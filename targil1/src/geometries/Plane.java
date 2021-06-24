@@ -5,13 +5,13 @@ import primitives.Point3D;
 import primitives.Vector;
 
 
-
 public class Plane implements Geometry {
     final Point3D _q0;
     final Vector _normal;
 
     /**
      * plain constructor
+     *
      * @param point  - A Point3D for indicating the plane using Vector and a point.
      * @param vector - A Vector for indicating the plane using Vector and a point.
      */
@@ -21,9 +21,9 @@ public class Plane implements Geometry {
     }
 
 
-
     /**
      * constructor for Plane object
+     *
      * @param p1 - a point3D
      * @param p2 - a point3D
      * @param p3 - a point3D
@@ -36,7 +36,6 @@ public class Plane implements Geometry {
     }
 
     /**
-     *
      * @return -returns a string with a description of a point (x,y,z)
      */
     @Override
@@ -49,9 +48,11 @@ public class Plane implements Geometry {
 
     /**
      * Getter for the private field q0.
+     *
      * @return Point3D - q0
      */
     public Point3D getQ0() {
+
         return _q0;
     }
 
@@ -72,4 +73,7 @@ public class Plane implements Geometry {
         return _normal;
     }
 
+    public Vector getNormal() {
+        return _normal;
+    }
 }
